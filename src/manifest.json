@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Circle Back",
+  "version": "1.0.0",
+  "description": "Meeting bingo that marks itself. Reads live captions in Google Meet, Teams and Zoom and ticks off the buzzwords.",
+  "minimum_chrome_version": "116",
+  "icons": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+  "action": { "default_title": "Circle Back", "default_popup": "popup/index.html", "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png" } },
+  "options_page": "options/index.html",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*",
+        "https://teams.microsoft.com/*",
+        "https://teams.live.com/*",
+        "https://teams.cloud.microsoft/*",
+        "https://*.zoom.us/wc/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

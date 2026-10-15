@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Circle Back settings</title>
+    <link rel="stylesheet" href="../ui/page.css" />
+    <style>
+      .page { max-width: 600px; margin: 0 auto; padding: 32px 18px 64px; display: grid; gap: 16px; }
+      header p { margin: 6px 0 0; color: var(--ink-2); }
+      section { border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: grid; gap: 12px; background: var(--paper); }
+      section h2 { margin: 0; font-size: 16px; }
+      label { display: grid; gap: 5px; font-size: 13px; font-weight: 600; color: var(--ink-2); }
+      label.check { display: flex; gap: 10px; align-items: flex-start; font-weight: 500; color: var(--ink); }
+      label.check input { margin-top: 3px; accent-color: var(--coral); }
+      select, input[type=text], textarea { border: 1px solid var(--line); background: var(--paper); border-radius: 10px; padding: 9px 10px; font-weight: 400; color: var(--ink); }
+      textarea { min-height: 180px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.6; resize: vertical; }
+      .hint { margin: 0; font-size: 12.5px; color: var(--ink-3); font-weight: 400; }
+      .count { font-size: 12.5px; color: var(--ink-3); }
+      .count.bad { color: var(--coral); }
+      .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+      .saved { font-size: 13px; color: var(--mint); }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand" id="brand"><b>Circle Back</b></div>
+        <p>Meeting bingo that marks itself. Settings are stored on this device only.</p>
+      </header>
+
+      <section>
+        <h2>Your card</h2>
+        <label>Phrase pack for new cards <select id="packId"></select></label>
+        <label>Your name <span class="hint">Optional. With a team code, your name gives you your own card. Never shown to anyone.</span><input type="text" id="player" maxlength="40" autocomplete="off" /></label>
+      </section>
+
+      <section>
+        <h2>Your own phrases</h2>
+        <p class="hint">One phrase per line. Add other ways of saying it after a <code>|</code>, for example <code>Just a sec | one sec | give me a second</code>. You need at least 24 phrases; then pick "Your phrases" as the pack.</p>
+        <textarea id="custom" spellcheck="false" placeholder="Kaizen&#10;Let's take a step back | step back&#10;Just a sec | one sec | give me a second"></textarea>
+        <span class="count" id="count"></span>
+      </section>
+
+      <section>
+        <h2>Captions</h2>
+        <label class="check"><input type="checkbox" id="autoMark" /> <span>Mark squares automatically from live captions<br /><span class="hint">Captions are read on your computer only. Nothing is recorded, stored or sent anywhere. Only the phrases you've heard are counted for your stats.</span></span></label>
+        <label class="check"><input type="checkbox" id="meet" /> Show the card in Google Meet calls</label>
+        <label class="check"><input type="checkbox" id="teams" /> Show the card in Microsoft Teams calls</label>
+        <label class="check"><input type="checkbox" id="zoom" /> Show the card in Zoom calls (in the browser)</label>
+      </section>
+
+      <section>
+        <h2>Stats</h2>
+        <div class="row"><button class="btn" id="reset" type="button">Reset my stats</button><span class="saved" id="resetMsg" role="status"></span></div>
+      </section>
+
+      <div class="row"><button class="btn primary" id="save" type="button">Save settings</button><span class="saved" id="saved" role="status"></span></div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
