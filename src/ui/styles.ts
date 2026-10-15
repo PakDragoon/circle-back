@@ -42,7 +42,7 @@ button { cursor: pointer; }
 .status.waiting .dot { background: var(--amber); }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(35,148,106,.55); } 70% { box-shadow: 0 0 0 7px rgba(35,148,106,0); } 100% { box-shadow: 0 0 0 0 rgba(35,148,106,0); } }
 
-.grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; padding: 0 12px; }
+.grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; padding: 0 12px; }
 .cell { position: relative; aspect-ratio: 1; border: 1px solid var(--line); background: var(--paper); border-radius: 9px; padding: 3px;
   display: grid; place-items: center; text-align: center; font-size: 10.5px; line-height: 1.15; font-weight: 600; color: var(--ink);
   hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; transition: background-color .18s, color .18s, transform .18s; }

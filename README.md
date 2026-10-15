@@ -34,6 +34,8 @@ When you hit bingo, **Copy card** puts an image of your card on the clipboard to
 
 ## Privacy
 
+Full policy: [PRIVACY.md](PRIVACY.md).
+
 - Captions are read and matched on your computer only. Nothing is recorded, stored or sent anywhere.
 - The only things saved are your settings, your card for the current meeting, and counts of which phrases you've heard.
 - The extension doesn't use the microphone and has no access to any site other than Meet, Teams and Zoom.
