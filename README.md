@@ -1,5 +1,7 @@
 # Circle Back
 
+[![Available in the Chrome Web Store](https://img.shields.io/chrome-web-store/v/einjddabkmeifhncghkdmjekhcohplkf?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/einjddabkmeifhncghkdmjekhcohplkf) [![Chrome Web Store users](https://img.shields.io/chrome-web-store/users/einjddabkmeifhncghkdmjekhcohplkf?label=users)](https://chromewebstore.google.com/detail/einjddabkmeifhncghkdmjekhcohplkf)
+
 Meeting bingo that marks itself. A Chrome extension that puts a bingo card on your Google Meet, Microsoft Teams or Zoom call and ticks off the buzzwords as people say them, by reading the meeting's live captions.
 
 <a href="https://www.youtube.com/watch?v=30JAGizVGGU"><img src="docs/demo-video.png" width="720" alt="Circle Back demo video: meeting bingo that marks itself"></a>
@@ -47,7 +49,9 @@ Full policy: [PRIVACY.md](PRIVACY.md).
 
 ## Install
 
-From source, until it's on the Chrome Web Store:
+**[Add to Chrome from the Chrome Web Store](https://chromewebstore.google.com/detail/einjddabkmeifhncghkdmjekhcohplkf)**. Then join a Google Meet, Teams or Zoom call in Chrome and turn on captions. Your card appears in the bottom-right corner.
+
+To build from source instead:
 
 ```bash
 npm install
