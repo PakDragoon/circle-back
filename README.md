@@ -2,7 +2,9 @@
 
 Meeting bingo that marks itself. A Chrome extension that puts a bingo card on your Google Meet, Microsoft Teams or Zoom call and ticks off the buzzwords as people say them, by reading the meeting's live captions.
 
-<img src="docs/bingo.png" width="720" alt="A Circle Back bingo card floating over a video call, with a completed row and a BINGO banner">
+<a href="https://www.youtube.com/watch?v=30JAGizVGGU"><img src="docs/demo-video.png" width="720" alt="Circle Back demo video: meeting bingo that marks itself"></a>
+
+▶ [Watch the demo on YouTube](https://www.youtube.com/watch?v=30JAGizVGGU)
 
 ## How you'd use it
 
@@ -31,6 +33,8 @@ When you hit bingo, **Copy card** puts an image of your card on the clipboard to
 <img src="docs/popup.png" width="260" alt="Toolbar popup with bingo stats and most heard phrases">
 <img src="docs/card-window.png" width="320" alt="Bingo card in its own window for desktop meeting apps">
 </p>
+
+<img src="docs/bingo.png" width="720" alt="A Circle Back bingo card floating over a video call, with a completed row and a BINGO banner">
 
 ## Privacy
 
